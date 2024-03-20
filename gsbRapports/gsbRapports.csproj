@@ -82,7 +82,7 @@
       <DependentUpon>ajouterRapports.cs</DependentUpon>
     </Compile>
     <Compile Include="famille.cs">
-      <DependentUpon>mdGsbrapports.tt</DependentUpon>
+      <DependentUpon>gsbrapports.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -96,67 +96,46 @@
     <Compile Include="FrmRechercher.Designer.cs">
       <DependentUpon>FrmRechercher.cs</DependentUpon>
     </Compile>
-    <Compile Include="gsbBase.Context.cs">
+    <Compile Include="gsbrapports.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>gsbBase.Context.tt</DependentUpon>
+      <DependentUpon>gsbrapports.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="gsbBase.cs">
+    <Compile Include="gsbrapports.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>gsbBase.tt</DependentUpon>
+      <DependentUpon>gsbrapports.tt</DependentUpon>
     </Compile>
-    <Compile Include="gsbBase.Designer.cs">
+    <Compile Include="gsbrapports.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>gsbBase.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="mdGsbrapports.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>mdGsbrapports.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="mdGsbrapports.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>mdGsbrapports.tt</DependentUpon>
-    </Compile>
-    <Compile Include="mdGsbrapports.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>mdGsbrapports.edmx</DependentUpon>
+      <DependentUpon>gsbrapports.edmx</DependentUpon>
     </Compile>
     <Compile Include="medecin.cs">
-      <DependentUpon>mdGsbrapports.tt</DependentUpon>
+      <DependentUpon>gsbrapports.tt</DependentUpon>
     </Compile>
     <Compile Include="medicament.cs">
-      <DependentUpon>mdGsbrapports.tt</DependentUpon>
+      <DependentUpon>gsbrapports.tt</DependentUpon>
     </Compile>
     <Compile Include="offrir.cs">
-      <DependentUpon>mdGsbrapports.tt</DependentUpon>
+      <DependentUpon>gsbrapports.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rapport.cs">
-      <DependentUpon>mdGsbrapports.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>mdGsbrapports.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>mdGsbrapports.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>mdGsbrapports.tt</DependentUpon>
+      <DependentUpon>gsbrapports.tt</DependentUpon>
     </Compile>
     <Compile Include="visiteur.cs">
-      <DependentUpon>mdGsbrapports.tt</DependentUpon>
+      <DependentUpon>gsbrapports.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ajouterRapports.resx">
       <DependentUpon>ajouterRapports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRechercher.resx">
+      <DependentUpon>FrmRechercher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -168,28 +147,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
-    <EntityDeploy Include="mdGsbrapports.edmx">
+    <EntityDeploy Include="gsbrapports.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>mdGsbrapports.Designer.cs</LastGenOutput>
+      <LastGenOutput>gsbrapports.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <EntityDeploy Include="gsbBase.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>gsbBase.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="gsbBase.edmx.diagram">
-      <DependentUpon>gsbBase.edmx</DependentUpon>
-    </None>
-    <None Include="mdGsbrapports.edmx.diagram">
-      <DependentUpon>mdGsbrapports.edmx</DependentUpon>
+    <None Include="gsbrapports.edmx.diagram">
+      <DependentUpon>gsbrapports.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ajouterRapports.datasource" />
     <None Include="Properties\DataSources\famille.datasource" />
     <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\FrmRechercher.datasource" />
     <None Include="Properties\DataSources\gsb2021Entities.datasource" />
     <None Include="Properties\DataSources\gsbRapports.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\gsbRapports.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\gsbrapportsEntities.datasource" />
+    <None Include="Properties\DataSources\master.datasource" />
     <None Include="Properties\DataSources\medecin.datasource" />
     <None Include="Properties\DataSources\medicament.datasource" />
     <None Include="Properties\DataSources\offrir.datasource" />
@@ -210,28 +184,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="gsbBase.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>gsbBase.edmx</DependentUpon>
-      <LastGenOutput>gsbBase.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="gsbBase.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>gsbBase.edmx</DependentUpon>
-      <LastGenOutput>gsbBase.cs</LastGenOutput>
-    </Content>
-    <Content Include="mdGsbrapports.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>mdGsbrapports.Context.cs</LastGenOutput>
-      <DependentUpon>mdGsbrapports.edmx</DependentUpon>
-    </Content>
-    <Content Include="mdGsbrapports.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>mdGsbrapports.edmx</DependentUpon>
-      <LastGenOutput>mdGsbrapports.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +197,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gsbrapports.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>gsbrapports.edmx</DependentUpon>
+      <LastGenOutput>gsbrapports.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="gsbrapports.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>gsbrapports.edmx</DependentUpon>
+      <LastGenOutput>gsbrapports.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

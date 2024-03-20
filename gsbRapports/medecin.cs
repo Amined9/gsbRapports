@@ -16,7 +16,7 @@ namespace gsbRapports
     {
         public medecin()
         {
-            this.rapports = new HashSet<rapport>();
+            this.rapport = new HashSet<rapport>();
         }
     
         public int id { get; set; }
@@ -27,6 +27,6 @@ namespace gsbRapports
         public string specialiteComplementaire { get; set; }
         public int departement { get; set; }
     
-        public virtual ICollection<rapport> rapports { get; set; }
+        public virtual ICollection<rapport> rapport { get; set; }
     }
 }

@@ -16,12 +16,12 @@ namespace gsbRapports
     {
         public famille()
         {
-            this.medicaments = new HashSet<medicament>();
+            this.medicament = new HashSet<medicament>();
         }
     
         public string id { get; set; }
         public string libelle { get; set; }
     
-        public virtual ICollection<medicament> medicaments { get; set; }
+        public virtual ICollection<medicament> medicament { get; set; }
     }
 }

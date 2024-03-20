@@ -16,7 +16,7 @@ namespace gsbRapports
     {
         public visiteur()
         {
-            this.rapports = new HashSet<rapport>();
+            this.rapport = new HashSet<rapport>();
         }
     
         public string id { get; set; }
@@ -29,6 +29,6 @@ namespace gsbRapports
         public string ville { get; set; }
         public Nullable<System.DateTime> dateEmbauche { get; set; }
     
-        public virtual ICollection<rapport> rapports { get; set; }
+        public virtual ICollection<rapport> rapport { get; set; }
     }
 }

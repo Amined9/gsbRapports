@@ -16,7 +16,7 @@ namespace gsbRapports
     {
         public medicament()
         {
-            this.offrirs = new HashSet<offrir>();
+            this.offrir = new HashSet<offrir>();
         }
     
         public string id { get; set; }
@@ -27,6 +27,6 @@ namespace gsbRapports
         public string contreIndications { get; set; }
     
         public virtual famille famille { get; set; }
-        public virtual ICollection<offrir> offrirs { get; set; }
+        public virtual ICollection<offrir> offrir { get; set; }
     }
 }

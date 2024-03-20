@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmRechercher
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "FrmRechercher";
             this.Text = "FrmRechercher";
+            this.Load += new System.EventHandler(this.FrmRechercher_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

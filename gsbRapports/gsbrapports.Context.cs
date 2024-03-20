@@ -13,10 +13,10 @@ namespace gsbRapports
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class gsb2021Entities : DbContext
+    public partial class gsbrapportsEntities : DbContext
     {
-        public gsb2021Entities()
-            : base("name=gsb2021Entities")
+        public gsbrapportsEntities()
+            : base("name=gsbrapportsEntities")
         {
         }
     
@@ -24,12 +24,20 @@ namespace gsbRapports
         {
             throw new UnintentionalCodeFirstException();
         }
-    
-        public DbSet<famille> familles { get; set; }
-        public DbSet<medecin> medecins { get; set; }
-        public DbSet<medicament> medicaments { get; set; }
-        public DbSet<offrir> offrirs { get; set; }
-        public DbSet<rapport> rapports { get; set; }
-        public DbSet<visiteur> visiteurs { get; set; }
+
+        internal void Show()
+        {
+            throw new NotImplementedException();
+        }
+
+        public DbSet<famille> famille { get; set; }
+        public DbSet<medecin> medecin { get; set; }
+        public DbSet<medicament> medicament { get; set; }
+        public DbSet<offrir> offrir { get; set; }
+        public DbSet<rapport> rapport { get; set; }
+        public DbSet<visiteur> visiteur { get; set; }
+        public Form1 MdiParent { get; internal set; }
+
+   
     }
 }

@@ -11,11 +11,11 @@ namespace gsbRapports
 {
     public partial class Form1 : Form
     {
-        private gsb2021Entities mesDonnees;
+        private gsbrapportsEntities mesDonnees;
         public Form1()
         {
             this.InitializeComponent();
-            this.mesDonnees = new gsb2021Entities();
+            this.mesDonnees = new gsbrapportsEntities();
 
         }
 
@@ -41,14 +41,14 @@ namespace gsbRapports
 
         private void ajouterToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            ajouterRapports frm = new ajouterRapports(mesDonnees);
+            ajouterRapports frm = new ajouterRapports(this.mesDonnees);
             frm.MdiParent = this;
             frm.Show();
         }
 
         private void rechercherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmRechercher f=new FrmRechercher(mesDonnees);
+            FrmRechercher f =new FrmRechercher(this.mesDonnees);
             f.MdiParent= this;
             f.Show();
         }

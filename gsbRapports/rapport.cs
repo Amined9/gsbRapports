@@ -16,7 +16,7 @@ namespace gsbRapports
     {
         public rapport()
         {
-            this.offrirs = new HashSet<offrir>();
+            this.offrir = new HashSet<offrir>();
         }
     
         public int id { get; set; }
@@ -27,7 +27,7 @@ namespace gsbRapports
         public int idMedecin { get; set; }
     
         public virtual medecin medecin { get; set; }
-        public virtual ICollection<offrir> offrirs { get; set; }
+        public virtual ICollection<offrir> offrir { get; set; }
         public virtual visiteur visiteur { get; set; }
     }
 }

@@ -12,11 +12,16 @@ namespace gsbRapports
 {
     public partial class FrmRechercher : Form
     {
-        private gsb2021Entities mesDonnees;
-        public FrmRechercher(gsb2021Entities mesDonnees)
+        private gsbrapportsEntities mesDonnees;
+        public FrmRechercher(gsbrapportsEntities mesDonnees)
         {
             InitializeComponent();
             this.mesDonnees = mesDonnees;
+        }
+
+        private void FrmRechercher_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
