@@ -159,19 +159,14 @@
     <None Include="Properties\DataSources\famille.datasource" />
     <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\FrmRechercher.datasource" />
-    <None Include="Properties\DataSources\gsb2021Entities.datasource" />
     <None Include="Properties\DataSources\gsbRapports.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\gsbRapports.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\gsbrapportsEntities.datasource" />
-    <None Include="Properties\DataSources\master.datasource" />
     <None Include="Properties\DataSources\medecin.datasource" />
     <None Include="Properties\DataSources\medicament.datasource" />
     <None Include="Properties\DataSources\offrir.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\rapport.datasource" />
-    <None Include="Properties\DataSources\sp_helpdiagramdefinition_Result.datasource" />
-    <None Include="Properties\DataSources\sp_helpdiagrams_Result.datasource" />
-    <None Include="Properties\DataSources\sysdiagram.datasource" />
     <None Include="Properties\DataSources\visiteur.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
