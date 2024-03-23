@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gsbRapports
 {
@@ -52,17 +53,59 @@ namespace gsbRapports
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private int getNumRapport()
+        {
+            var reqDernier = (from rapport in this.mesDonnees.rapport
+                              orderby rapport.id descending
+                              select rapport);
+            rapport dernierRapport = reqDernier.FirstOrDefault();
+            int n = dernierRapport.id + 1;
+            return n;
+        }
+
+        private rapport newRapport()
+        {
+            string strIdmed = cmbmedecin.ValueMember;
+            int idmed;
+            int.TryParse(strIdmed, out idmed);
+            rapport newrapport = new rapport();
+            newrapport.id = getNumRapport();
+            newrapport.date = null; //dtdate.Value;
+            newrapport.motif = txtmotif.Text;
+            newrapport.bilan = txtbilan.Text;
+            newrapport.idVisiteur = cmbvisiteur.ValueMember;
+            newrapport.idMedecin = idmed;
+            return newrapport;
+        }
+        
+
+        private void btnvalider_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.mesDonnees.rapport.Add(newRapport());
+                this.bdgrapport.EndEdit();
+                bdgfamille.EndEdit();
+                bdgmedecin.EndEdit();
+                bdgvisiteur.EndEdit();  
+                this.mesDonnees.SaveChanges();
+                MessageBox.Show("Enregistrer");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur lors de l'enregistrement: {ex.Message.ToUpper()}");                 
+            }
+
+
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
 
         }
 
         private void bdgrapport_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnvalider_Click(object sender, EventArgs e)
         {
 
         }

@@ -27,12 +27,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ajouterRapports));
             this.cmbvisiteur = new System.Windows.Forms.ComboBox();
+            this.bdgvisiteur = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbmedicament = new System.Windows.Forms.ComboBox();
+            this.bdgfamille = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.cmbmedecin = new System.Windows.Forms.ComboBox();
+            this.bdgmedecin = new System.Windows.Forms.BindingSource(this.components);
             this.Date = new System.Windows.Forms.Label();
             this.dtdate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,17 +45,29 @@
             this.txtbilan = new System.Windows.Forms.TextBox();
             this.btnvalider = new System.Windows.Forms.Button();
             this.bdgrapport = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bdgvisiteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgfamille)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgmedecin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgrapport)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbvisiteur
             // 
+            this.cmbvisiteur.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgvisiteur, "nom", true));
+            this.cmbvisiteur.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bdgvisiteur, "nom", true));
+            this.cmbvisiteur.DataSource = this.bdgvisiteur;
+            this.cmbvisiteur.DisplayMember = "nom";
             this.cmbvisiteur.FormattingEnabled = true;
             this.cmbvisiteur.Location = new System.Drawing.Point(212, 40);
             this.cmbvisiteur.Margin = new System.Windows.Forms.Padding(2);
             this.cmbvisiteur.Name = "cmbvisiteur";
             this.cmbvisiteur.Size = new System.Drawing.Size(146, 21);
             this.cmbvisiteur.TabIndex = 0;
+            this.cmbvisiteur.ValueMember = "nom";
+            // 
+            // bdgvisiteur
+            // 
+            this.bdgvisiteur.DataSource = typeof(gsbRapports.visiteur);
             // 
             // label1
             // 
@@ -62,7 +78,6 @@
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Visiteur";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -76,12 +91,19 @@
             // 
             // cmbmedicament
             // 
+            this.cmbmedicament.DataSource = this.bdgfamille;
+            this.cmbmedicament.DisplayMember = "libelle";
             this.cmbmedicament.FormattingEnabled = true;
             this.cmbmedicament.Location = new System.Drawing.Point(212, 122);
             this.cmbmedicament.Margin = new System.Windows.Forms.Padding(2);
             this.cmbmedicament.Name = "cmbmedicament";
             this.cmbmedicament.Size = new System.Drawing.Size(146, 21);
             this.cmbmedicament.TabIndex = 2;
+            this.cmbmedicament.ValueMember = "id";
+            // 
+            // bdgfamille
+            // 
+            this.bdgfamille.DataSource = typeof(gsbRapports.famille);
             // 
             // label3
             // 
@@ -95,12 +117,19 @@
             // 
             // cmbmedecin
             // 
+            this.cmbmedecin.DataSource = this.bdgmedecin;
+            this.cmbmedecin.DisplayMember = "nom";
             this.cmbmedecin.FormattingEnabled = true;
             this.cmbmedecin.Location = new System.Drawing.Point(212, 79);
             this.cmbmedecin.Margin = new System.Windows.Forms.Padding(2);
             this.cmbmedecin.Name = "cmbmedecin";
             this.cmbmedecin.Size = new System.Drawing.Size(146, 21);
             this.cmbmedecin.TabIndex = 4;
+            this.cmbmedecin.ValueMember = "id";
+            // 
+            // bdgmedecin
+            // 
+            this.bdgmedecin.DataSource = typeof(gsbRapports.medecin);
             // 
             // Date
             // 
@@ -169,8 +198,7 @@
             // 
             // bdgrapport
             // 
-            this.bdgrapport.DataSource = typeof(gsbRapports.gsbrapportsEntities);
-            this.bdgrapport.CurrentChanged += new System.EventHandler(this.bdgrapport_CurrentChanged);
+            this.bdgrapport.DataSource = typeof(gsbRapports.rapport);
             // 
             // ajouterRapports
             // 
@@ -190,10 +218,14 @@
             this.Controls.Add(this.cmbmedicament);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbvisiteur);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ajouterRapports";
             this.Text = "ajouterRapports";
             this.Load += new System.EventHandler(this.ajouterRapports_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bdgvisiteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgfamille)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgmedecin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgrapport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -216,5 +248,8 @@
         private System.Windows.Forms.TextBox txtmotif;
         private System.Windows.Forms.TextBox txtbilan;
         private System.Windows.Forms.Button btnvalider;
+        private System.Windows.Forms.BindingSource bdgvisiteur;
+        private System.Windows.Forms.BindingSource bdgmedecin;
+        private System.Windows.Forms.BindingSource bdgfamille;
     }
 }
