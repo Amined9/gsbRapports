@@ -28,20 +28,195 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.labelvisiteur = new System.Windows.Forms.Label();
+            this.cmbvisiteur = new System.Windows.Forms.ComboBox();
+            this.labeldate = new System.Windows.Forms.Label();
+            this.cmbdate = new System.Windows.Forms.ComboBox();
+            this.dgvrapport = new System.Windows.Forms.DataGridView();
+            this.bdgvisiteur = new System.Windows.Forms.BindingSource(this.components);
+            this.bdgdate = new System.Windows.Forms.BindingSource(this.components);
+            this.bdgrapport = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.motifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bilanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idVisiteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMedecinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medecinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.offrirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.visiteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvrapport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgvisiteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgrapport)).BeginInit();
             this.SuspendLayout();
+            // 
+            // labelvisiteur
+            // 
+            this.labelvisiteur.AutoSize = true;
+            this.labelvisiteur.Location = new System.Drawing.Point(92, 54);
+            this.labelvisiteur.Name = "labelvisiteur";
+            this.labelvisiteur.Size = new System.Drawing.Size(41, 13);
+            this.labelvisiteur.TabIndex = 0;
+            this.labelvisiteur.Text = "Visiteur";
+            // 
+            // cmbvisiteur
+            // 
+            this.cmbvisiteur.DataSource = this.bdgvisiteur;
+            this.cmbvisiteur.DisplayMember = "nom";
+            this.cmbvisiteur.FormattingEnabled = true;
+            this.cmbvisiteur.Location = new System.Drawing.Point(174, 51);
+            this.cmbvisiteur.Name = "cmbvisiteur";
+            this.cmbvisiteur.Size = new System.Drawing.Size(121, 21);
+            this.cmbvisiteur.TabIndex = 1;
+            // 
+            // labeldate
+            // 
+            this.labeldate.AutoSize = true;
+            this.labeldate.Location = new System.Drawing.Point(92, 94);
+            this.labeldate.Name = "labeldate";
+            this.labeldate.Size = new System.Drawing.Size(30, 13);
+            this.labeldate.TabIndex = 2;
+            this.labeldate.Text = "Date";
+            // 
+            // cmbdate
+            // 
+            this.cmbdate.DataSource = this.bdgdate;
+            this.cmbdate.DisplayMember = "date";
+            this.cmbdate.FormattingEnabled = true;
+            this.cmbdate.Location = new System.Drawing.Point(174, 91);
+            this.cmbdate.Name = "cmbdate";
+            this.cmbdate.Size = new System.Drawing.Size(121, 21);
+            this.cmbdate.TabIndex = 3;
+            // 
+            // dgvrapport
+            // 
+            this.dgvrapport.AutoGenerateColumns = false;
+            this.dgvrapport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvrapport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.motifDataGridViewTextBoxColumn,
+            this.bilanDataGridViewTextBoxColumn,
+            this.idVisiteurDataGridViewTextBoxColumn,
+            this.idMedecinDataGridViewTextBoxColumn,
+            this.medecinDataGridViewTextBoxColumn,
+            this.offrirDataGridViewTextBoxColumn,
+            this.visiteurDataGridViewTextBoxColumn});
+            this.dgvrapport.DataSource = this.bdgrapport;
+            this.dgvrapport.Location = new System.Drawing.Point(95, 152);
+            this.dgvrapport.Name = "dgvrapport";
+            this.dgvrapport.Size = new System.Drawing.Size(643, 150);
+            this.dgvrapport.TabIndex = 4;
+            // 
+            // bdgvisiteur
+            // 
+            this.bdgvisiteur.DataSource = typeof(gsbRapports.visiteur);
+            this.bdgvisiteur.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            // 
+            // bdgdate
+            // 
+            this.bdgdate.DataSource = typeof(gsbRapports.rapport);
+            // 
+            // bdgrapport
+            // 
+            this.bdgrapport.DataSource = typeof(gsbRapports.rapport);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // motifDataGridViewTextBoxColumn
+            // 
+            this.motifDataGridViewTextBoxColumn.DataPropertyName = "motif";
+            this.motifDataGridViewTextBoxColumn.HeaderText = "motif";
+            this.motifDataGridViewTextBoxColumn.Name = "motifDataGridViewTextBoxColumn";
+            // 
+            // bilanDataGridViewTextBoxColumn
+            // 
+            this.bilanDataGridViewTextBoxColumn.DataPropertyName = "bilan";
+            this.bilanDataGridViewTextBoxColumn.HeaderText = "bilan";
+            this.bilanDataGridViewTextBoxColumn.Name = "bilanDataGridViewTextBoxColumn";
+            // 
+            // idVisiteurDataGridViewTextBoxColumn
+            // 
+            this.idVisiteurDataGridViewTextBoxColumn.DataPropertyName = "idVisiteur";
+            this.idVisiteurDataGridViewTextBoxColumn.HeaderText = "idVisiteur";
+            this.idVisiteurDataGridViewTextBoxColumn.Name = "idVisiteurDataGridViewTextBoxColumn";
+            // 
+            // idMedecinDataGridViewTextBoxColumn
+            // 
+            this.idMedecinDataGridViewTextBoxColumn.DataPropertyName = "idMedecin";
+            this.idMedecinDataGridViewTextBoxColumn.HeaderText = "idMedecin";
+            this.idMedecinDataGridViewTextBoxColumn.Name = "idMedecinDataGridViewTextBoxColumn";
+            // 
+            // medecinDataGridViewTextBoxColumn
+            // 
+            this.medecinDataGridViewTextBoxColumn.DataPropertyName = "medecin";
+            this.medecinDataGridViewTextBoxColumn.HeaderText = "medecin";
+            this.medecinDataGridViewTextBoxColumn.Name = "medecinDataGridViewTextBoxColumn";
+            // 
+            // offrirDataGridViewTextBoxColumn
+            // 
+            this.offrirDataGridViewTextBoxColumn.DataPropertyName = "offrir";
+            this.offrirDataGridViewTextBoxColumn.HeaderText = "offrir";
+            this.offrirDataGridViewTextBoxColumn.Name = "offrirDataGridViewTextBoxColumn";
+            // 
+            // visiteurDataGridViewTextBoxColumn
+            // 
+            this.visiteurDataGridViewTextBoxColumn.DataPropertyName = "visiteur";
+            this.visiteurDataGridViewTextBoxColumn.HeaderText = "visiteur";
+            this.visiteurDataGridViewTextBoxColumn.Name = "visiteurDataGridViewTextBoxColumn";
             // 
             // FrmRechercher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvrapport);
+            this.Controls.Add(this.cmbdate);
+            this.Controls.Add(this.labeldate);
+            this.Controls.Add(this.cmbvisiteur);
+            this.Controls.Add(this.labelvisiteur);
             this.Name = "FrmRechercher";
             this.Text = "FrmRechercher";
             this.Load += new System.EventHandler(this.FrmRechercher_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvrapport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgvisiteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgrapport)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label labelvisiteur;
+        private System.Windows.Forms.ComboBox cmbvisiteur;
+        private System.Windows.Forms.Label labeldate;
+        private System.Windows.Forms.ComboBox cmbdate;
+        private System.Windows.Forms.DataGridView dgvrapport;
+        private System.Windows.Forms.BindingSource bdgvisiteur;
+        private System.Windows.Forms.BindingSource bdgdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn motifDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bilanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idVisiteurDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMedecinDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medecinDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn offrirDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn visiteurDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bdgrapport;
     }
 }
