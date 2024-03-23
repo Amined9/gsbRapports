@@ -85,11 +85,11 @@ namespace gsbRapports
             try
             {
                 this.mesDonnees.rapport.Add(newRapport());
+                this.mesDonnees.SaveChanges();
                 this.bdgrapport.EndEdit();
                 bdgfamille.EndEdit();
                 bdgmedecin.EndEdit();
                 bdgvisiteur.EndEdit();  
-                this.mesDonnees.SaveChanges();
                 MessageBox.Show("Enregistrer");
             }
             catch (Exception ex)
