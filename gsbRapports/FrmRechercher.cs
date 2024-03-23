@@ -17,14 +17,22 @@ namespace gsbRapports
         {
             InitializeComponent();
             this.mesDonnees = mesDonnees;
+            this.cmbdate.DataSource = mesDonnees.rapport.ToList();
+            this.bdgrapport.DataSource = mesDonnees.rapport.ToList();
+            this.bdgvisiteur.DataSource = mesDonnees.visiteur.ToList();
+
         }
 
         private void FrmRechercher_Load(object sender, EventArgs e)
         {
-
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

@@ -48,7 +48,7 @@ namespace gsbRapports
 
         private void rechercherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmRechercher f =new FrmRechercher(this.mesDonnees);
+            FrmRechercher f = new FrmRechercher(this.mesDonnees);
             f.MdiParent= this;
             f.Show();
         }
