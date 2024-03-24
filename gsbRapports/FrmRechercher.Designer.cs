@@ -173,40 +173,26 @@
             // 
             this.btnfiltrer.Location = new System.Drawing.Point(447, 51);
             this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-=========
             this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
             this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>>>> Temporary merge branch 2
             this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-=========
             this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
             this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>>>> Temporary merge branch 2
             this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-=========
             this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
             this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>>>> Temporary merge branch 2
             this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-=========
             this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
             this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>>>> Temporary merge branch 2
             this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-=========
             this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
             this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>>>> Temporary merge branch 2
             this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-=========
             this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
             this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>>>> Temporary merge branch 2
             this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-=========
             this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
             this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>>>> Temporary merge branch 2
             this.btnfiltrer.Name = "btnfiltrer";
             this.btnfiltrer.Size = new System.Drawing.Size(56, 19);
             this.btnfiltrer.TabIndex = 6;
