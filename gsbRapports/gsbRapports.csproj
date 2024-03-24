@@ -162,6 +162,7 @@
       <LastGenOutput>gsbrapports.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.config" />
+    <None Include="app.local.config" />
     <None Include="gsbrapports.edmx.diagram">
       <DependentUpon>gsbrapports.edmx</DependentUpon>
     </None>
