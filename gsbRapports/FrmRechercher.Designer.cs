@@ -171,28 +171,8 @@
             // 
             // btnfiltrer
             // 
-            this.btnfiltrer.Location = new System.Drawing.Point(447, 51);
-            this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
             this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
-            this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-            this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
-            this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-            this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
-            this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-            this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
-            this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-            this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
-            this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-            this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
-            this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
-            this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
-            this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2);
             this.btnfiltrer.Name = "btnfiltrer";
             this.btnfiltrer.Size = new System.Drawing.Size(56, 19);
             this.btnfiltrer.TabIndex = 6;
@@ -202,7 +182,7 @@
             // 
             // btngenerer
             // 
-            this.btngenerer.Location = new System.Drawing.Point(447, 94);
+            this.btngenerer.Location = new System.Drawing.Point(406, 91);
             this.btngenerer.Name = "btngenerer";
             this.btngenerer.Size = new System.Drawing.Size(56, 19);
             this.btngenerer.TabIndex = 7;
