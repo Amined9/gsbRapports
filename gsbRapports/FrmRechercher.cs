@@ -17,14 +17,32 @@ namespace gsbRapports
         {
             InitializeComponent();
             this.mesDonnees = mesDonnees;
-            this.cmbdate.DataSource = mesDonnees.rapport.ToList();
+            //this.cmbdate.DataSource = mesDonnees.rapport.ToList();
             this.bdgrapport.DataSource = mesDonnees.rapport.ToList();
             this.bdgvisiteur.DataSource = mesDonnees.visiteur.ToList();
+            this.InitializeComboBoxDates();
 
         }
 
         private void FrmRechercher_Load(object sender, EventArgs e)
         {
+
+        }
+        private void FilterReportsByDate()
+        {
+            if (cmbdate.SelectedItem != null)
+            {
+                DateTime selectedDate = (DateTime)cmbdate.SelectedItem;
+                var filteredReports = mesDonnees.rapport.Where(r => r.date == selectedDate).ToList();
+                bdgrapport.DataSource = filteredReports;
+            }
+        }
+        private void InitializeComboBoxDates()
+        {
+            // Assuming your 'rapport' table has a 'Date' field that you want to filter by
+            var dates = mesDonnees.rapport.Select(r => r.date).Distinct().ToList();
+            this.cmbdate.DataSource = dates;
+            // Set relevant properties if needed, like DisplayMember and ValueMember
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)

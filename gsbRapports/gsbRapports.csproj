@@ -156,11 +156,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="app.config" />
+    <None Include=".editorconfig" />
     <EntityDeploy Include="gsbrapports.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>gsbrapports.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.config" />
     <None Include="gsbrapports.edmx.diagram">
       <DependentUpon>gsbrapports.edmx</DependentUpon>
     </None>

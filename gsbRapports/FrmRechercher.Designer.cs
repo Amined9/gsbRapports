@@ -199,8 +199,7 @@
             // 
             // btnfiltrer
             // 
-            this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
-            this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnfiltrer.Location = new System.Drawing.Point(542, 63);
             this.btnfiltrer.Name = "btnfiltrer";
             this.btnfiltrer.Size = new System.Drawing.Size(56, 19);
             this.btnfiltrer.TabIndex = 6;
