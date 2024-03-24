@@ -47,6 +47,7 @@
             this.visiteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdgrapport = new System.Windows.Forms.BindingSource(this.components);
             this.btnfiltrer = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bdgvisiteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvrapport)).BeginInit();
@@ -204,7 +205,7 @@
             // 
             // btnfiltrer
             // 
-            this.btnfiltrer.Location = new System.Drawing.Point(542, 63);
+            this.btnfiltrer.Location = new System.Drawing.Point(543, 63);
             this.btnfiltrer.Name = "btnfiltrer";
             this.btnfiltrer.Size = new System.Drawing.Size(75, 23);
             this.btnfiltrer.TabIndex = 6;
@@ -212,11 +213,21 @@
             this.btnfiltrer.UseVisualStyleBackColor = true;
             this.btnfiltrer.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(543, 116);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Filtrer";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FrmRechercher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnfiltrer);
             this.Controls.Add(this.labelvisiteur);
             this.Controls.Add(this.dgvrapport);
@@ -256,5 +267,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn visiteurDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bdgrapport;
         private System.Windows.Forms.Button btnfiltrer;
+        private System.Windows.Forms.Button button1;
     }
 }
