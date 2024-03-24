@@ -27,17 +27,16 @@ namespace gsbRapports
 
         private void ajouterRapports_Load(object sender, EventArgs e)
         {
-            // Charger les données des visiteurs dans la ComboBox cmbvisiteur
             cmbvisiteur.DataSource = mesDonnees.visiteur.ToList();
-            cmbvisiteur.DisplayMember = "nom"; // Remplacer "NomComplet" par le nom de la propriété à afficher dans la ComboBox
-            cmbvisiteur.ValueMember = "id"; // Remplacer "Id" par le nom de la propriété qui représente la valeur sélectionnée dans la ComboBox
-            // Charger les données des médicaments dans la ComboBox cmbmedicament
+            cmbvisiteur.DisplayMember = "nom"; 
+            cmbvisiteur.ValueMember = "id"; 
+
             cmbmedicament.DataSource = mesDonnees.medicament.ToList();
-            cmbmedicament.DisplayMember = "nomCommercial"; // Remplacer "NomMedicament" par le nom de la propriété à afficher dans la ComboBox
-            cmbmedicament.ValueMember = "id"; // Remplacer "Id" par le nom de la propriété qui représente la valeur sélectionnée dans la ComboBox
-            // Charger les données des médecins dans la ComboBox cmbmedecin
+            cmbmedicament.DisplayMember = "id";
+            cmbmedicament.ValueMember = "id";
+
             cmbmedecin.DataSource = mesDonnees.medecin.ToList();
-            cmbmedecin.DisplayMember = "nom"; // Remplacer "NomComplet" par le nom de la propriété à afficher dans la ComboBox
+            cmbmedecin.DisplayMember = "nom";
             cmbmedecin.ValueMember = "id";
         }
 
@@ -51,7 +50,6 @@ namespace gsbRapports
             int n = dernierRapport.id + 1;
             return n;
         }
-
         private rapport newRapport()
         {
             rapport newrapport = new rapport();
@@ -60,18 +58,27 @@ namespace gsbRapports
             newrapport.motif = txtmotif.Text;
             newrapport.bilan = txtbilan.Text;
             newrapport.idVisiteur = cmbvisiteur.SelectedValue.ToString();
-            newrapport.idMedecin = int.Parse(cmbmedecin.SelectedValue.ToString()); // Assurez-vous que ceci renvoie l'ID correct du médecin
+            newrapport.idMedecin = int.Parse(cmbmedecin.SelectedValue.ToString());
             return newrapport;
         }
-
-
-
+        private offrir newOffrir(int idRapport)
+        {
+            offrir off = new offrir();
+            off.idMedicament = (string)cmbmedicament.SelectedValue; 
+            off.idRapport = idRapport;
+            return off;
+        }
         private void btnvalider_Click(object sender, EventArgs e)
         {
             try
             {
-                this.mesDonnees.rapport.Add(newRapport());
+                rapport rap = newRapport(); 
+                this.mesDonnees.rapport.Add(rap);
                 this.mesDonnees.SaveChanges();
+
+                offrir off = newOffrir(rap.id); 
+                this.mesDonnees.offrir.Add(off); 
+                this.mesDonnees.SaveChanges(); 
                 MessageBox.Show("Enregistrer");
             }
             catch (Exception ex)

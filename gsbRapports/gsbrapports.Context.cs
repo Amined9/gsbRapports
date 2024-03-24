@@ -24,20 +24,12 @@ namespace gsbRapports
         {
             throw new UnintentionalCodeFirstException();
         }
-
-        internal void Show()
-        {
-            throw new NotImplementedException();
-        }
-
+    
         public DbSet<famille> famille { get; set; }
         public DbSet<medecin> medecin { get; set; }
         public DbSet<medicament> medicament { get; set; }
         public DbSet<offrir> offrir { get; set; }
         public DbSet<rapport> rapport { get; set; }
         public DbSet<visiteur> visiteur { get; set; }
-        public Form1 MdiParent { get; internal set; }
-
-   
     }
 }

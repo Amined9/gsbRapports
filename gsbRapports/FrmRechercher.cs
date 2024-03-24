@@ -19,7 +19,7 @@ namespace gsbRapports
             InitializeComponent();
             this.mesDonnees = mesDonnees;
             this.bdgrapport.DataSource = mesDonnees.rapport.ToList();
-            this.bdgvisiteur.DataSource = mesDonnees.visiteur.ToList();
+            this.bdgvisiteur.DataSource = mesDonnees.visiteur.ToList().Distinct();
             //this.cmbdate.DataSource = mesDonnees.rapport.ToList();
             //this.InitializeComboBoxVisiteur();
             this.InitializeComboBoxDates();
