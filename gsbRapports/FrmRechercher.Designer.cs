@@ -56,10 +56,9 @@
             // labelvisiteur
             // 
             this.labelvisiteur.AutoSize = true;
-            this.labelvisiteur.Location = new System.Drawing.Point(123, 66);
-            this.labelvisiteur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelvisiteur.Location = new System.Drawing.Point(92, 54);
             this.labelvisiteur.Name = "labelvisiteur";
-            this.labelvisiteur.Size = new System.Drawing.Size(51, 16);
+            this.labelvisiteur.Size = new System.Drawing.Size(41, 13);
             this.labelvisiteur.TabIndex = 0;
             this.labelvisiteur.Text = "Visiteur";
             // 
@@ -68,10 +67,9 @@
             this.cmbvisiteur.DataSource = this.bdgvisiteur;
             this.cmbvisiteur.DisplayMember = "nom";
             this.cmbvisiteur.FormattingEnabled = true;
-            this.cmbvisiteur.Location = new System.Drawing.Point(232, 63);
-            this.cmbvisiteur.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbvisiteur.Location = new System.Drawing.Point(174, 51);
             this.cmbvisiteur.Name = "cmbvisiteur";
-            this.cmbvisiteur.Size = new System.Drawing.Size(240, 24);
+            this.cmbvisiteur.Size = new System.Drawing.Size(181, 21);
             this.cmbvisiteur.TabIndex = 1;
             // 
             // bdgvisiteur
@@ -82,10 +80,9 @@
             // labeldate
             // 
             this.labeldate.AutoSize = true;
-            this.labeldate.Location = new System.Drawing.Point(123, 116);
-            this.labeldate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labeldate.Location = new System.Drawing.Point(92, 94);
             this.labeldate.Name = "labeldate";
-            this.labeldate.Size = new System.Drawing.Size(36, 16);
+            this.labeldate.Size = new System.Drawing.Size(30, 13);
             this.labeldate.TabIndex = 2;
             this.labeldate.Text = "Date";
             // 
@@ -94,10 +91,9 @@
             this.cmbdate.DataSource = this.bdgdate;
             this.cmbdate.DisplayMember = "date";
             this.cmbdate.FormattingEnabled = true;
-            this.cmbdate.Location = new System.Drawing.Point(232, 112);
-            this.cmbdate.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbdate.Location = new System.Drawing.Point(174, 91);
             this.cmbdate.Name = "cmbdate";
-            this.cmbdate.Size = new System.Drawing.Size(240, 24);
+            this.cmbdate.Size = new System.Drawing.Size(181, 21);
             this.cmbdate.TabIndex = 3;
             // 
             // bdgdate
@@ -119,11 +115,10 @@
             this.offrirDataGridViewTextBoxColumn,
             this.visiteurDataGridViewTextBoxColumn});
             this.dgvrapport.DataSource = this.bdgrapport;
-            this.dgvrapport.Location = new System.Drawing.Point(127, 187);
-            this.dgvrapport.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvrapport.Location = new System.Drawing.Point(95, 152);
             this.dgvrapport.Name = "dgvrapport";
             this.dgvrapport.RowHeadersWidth = 51;
-            this.dgvrapport.Size = new System.Drawing.Size(857, 185);
+            this.dgvrapport.Size = new System.Drawing.Size(643, 150);
             this.dgvrapport.TabIndex = 4;
             // 
             // idDataGridViewTextBoxColumn
@@ -204,9 +199,10 @@
             // 
             // btnfiltrer
             // 
-            this.btnfiltrer.Location = new System.Drawing.Point(542, 63);
+            this.btnfiltrer.Location = new System.Drawing.Point(406, 51);
+            this.btnfiltrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnfiltrer.Name = "btnfiltrer";
-            this.btnfiltrer.Size = new System.Drawing.Size(75, 23);
+            this.btnfiltrer.Size = new System.Drawing.Size(56, 19);
             this.btnfiltrer.TabIndex = 6;
             this.btnfiltrer.Text = "Filtrer";
             this.btnfiltrer.UseVisualStyleBackColor = true;
@@ -214,16 +210,15 @@
             // 
             // FrmRechercher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbvisiteur);
             this.Controls.Add(this.btnfiltrer);
             this.Controls.Add(this.labelvisiteur);
             this.Controls.Add(this.dgvrapport);
             this.Controls.Add(this.cmbdate);
             this.Controls.Add(this.labeldate);
-            this.Controls.Add(this.cmbvisiteur);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRechercher";
             this.Text = "FrmRechercher";
             this.Load += new System.EventHandler(this.FrmRechercher_Load);
