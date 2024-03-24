@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 *.config
 app.local.config
+/gsbRapports/gsbRapports.csproj
